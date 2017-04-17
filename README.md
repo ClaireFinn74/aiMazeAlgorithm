@@ -1,4 +1,4 @@
-# Artificial Intelligence Maze Algorithm
+# Artificial Intelligence Maze Algorithm - Controlling Game Characters with Neural Networks and Fuzzy Logic
 
 ## Description:
 A 2D Maze game including enemy sprites and a Spartan Warrior Character written in Java as part of a two person team.
