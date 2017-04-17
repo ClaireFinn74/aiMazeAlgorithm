@@ -9,5 +9,5 @@ A 2D Maze game including enemy sprites and a Spartan Warrior Character written i
 
 1) https://unicode-table.com/en/#latin-extended-b [Unicode character information]
 2) https://www.w3schools.com/colors/colors_picker.asp [RGB colours W3Schools]
-3) http://rs1182.pbsrc.com/albums/x443/Sapphire_Kirby_SPPF/MeowthTrophyO.png~c200 [MeowthTrophy Sprite]
-4) https://learnonline.gmit.ie/course/view.php?id=3461 [GMIT Learn online module for Artificial Intelligence]
+3) https://learnonline.gmit.ie/course/view.php?id=3461 [GMIT Learn online module for Artificial Intelligence]
+4) http://rs1182.pbsrc.com/albums/x443/Sapphire_Kirby_SPPF/MeowthTrophyO.png~c200 [MOAB Sprite]
