@@ -10,4 +10,4 @@ A 2D Maze game including enemy sprites and a Spartan Warrior Character written i
 1) https://unicode-table.com/en/#latin-extended-b [Unicode character information]
 2) https://www.w3schools.com/colors/colors_picker.asp [RGB colours W3Schools]
 3) https://learnonline.gmit.ie/course/view.php?id=3461 [GMIT Learn online module for Artificial Intelligence]
-4) 
+4) https://www.youtube.com/watch?v=-L-WgKMFuhE [Good explanation of the AStar Heuristic search Algorithm]
