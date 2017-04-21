@@ -1,0 +1,41 @@
+FUNCTION_BLOCK Project
+VAR_INPUT
+ weapon : REAL;
+ anger : REAL;
+END_VAR
+VAR_OUTPUT
+ risk : REAL;
+END_VAR
+FUZZIFY weapon
+ TERM sword := (0, 1) (10, 1) (20, 0);
+ TERM bomb := (15, 0) (20, 1) (30,1) (35,0);
+ TERM hydrogenBomb := (30, 0) (35, 1) (45, 1) (50,0);
+ TERM MOAB := (45,0) (50,1) (60,1) (65,0);
+END_FUZZIFY
+FUZZIFY anger
+ TERM irritated := (1, 1) (50, 0);
+ TERM irate := (45, 0) (100, 1);
+END_FUZZIFY
+DEFUZZIFY risk
+ TERM low := (0, 1) (45, 0);
+ TERM normal := trian 20.0 50.0 80.0;
+ TERM high := (55, 0) (100, 1);
+ METHOD : COG;
+ DEFAULT := 0;
+END_DEFUZZIFY
+RULEBLOCK No1
+ AND : MIN;
+ ACT : MIN;
+ ACCU : MAX;
+ RULE 1 : IF anger IS irritated THEN risk IS low;
+ RULE 2 : IF anger IS irate THEN risk IS high;
+ RULE 3 : IF weapon IS sword AND anger IS irritated THEN risk IS normal;
+ RULE 4 : IF weapon IS sword AND anger IS irate THEN risk IS high;
+ RULE 5 : IF weapon IS bomb AND anger IS irritated THEN risk IS normal;
+ RULE 6 : IF weapon IS bomb AND anger IS irate THEN risk IS high;
+ RULE 7 : IF weapon IS hydrogenBomb AND anger IS irritated THEN risk IS low;
+ RULE 8 : IF weapon IS hydrogenBomb AND anger IS irate THEN risk IS normal;
+ RULE 9 : IF weapon IS MOAB AND anger IS irritated THEN risk IS low;
+ RULE 10 : IF weapon IS MOAB AND anger IS irate THEN risk IS low;
+END_RULEBLOCK
+END_FUNCTION_BLOCK
