@@ -18,12 +18,13 @@ The __AStar search algorithm__ will decide _which path to take_ based on these v
 
 ## Fuzzy Logic Rules:
 The game sets out __rules__ for the _anger level of the spider_ (__irritated__ or __Irate__) and the _weapons_ the player uses within the game (__sword__, __bomb__, __hydrogen bomb__ and __MOAB__ (Mother of all Bombs)). The _anger level_ ranges from low (__irritated__) to high (__irate__) using _linguistic variables_ starting at 1 with a _membership value_ of 1 and ending at 50 with a _membership value_ of 0. The weapons use _linguistic variables_ to distinguish their _strength_ starting with the __sword__ at 0 with a _membership value_ of 1 and ending with the __MOAB__ at 65 with a _Membership Value_ of 0. We then set out some __Fuzzy rules__ to deal with whether the spider is _irritated/irate_ and what _weapon_ the player currently has which will be __more/less effective__ depending on how _strong_ the weapon is or how _angry_ the spider is. We covered all grounds by laying out every weapon in accordance to the spiders being at low anger(irritated) or high anger (irate) using __fuzzy rules__ within the fcl file.
+Within GameRunner, we used the linguistic variables set out in the fcl text file within if statements to say that our spider gets increasingly angry as the player defeats it's friends (the other spiders). The anger level is at max when it reaches 100 and the program will produce an out of range error if you set the variable to be outside the range we set out within the file. This means that we have successfully incorporated the fuzzy rules into our game.
 
 
 ## Currently, in the project we have:
 
 1. Fuzzy Logic with Linguistic variables and Membership values to create fuzzy rules for our game.
-2. An fcl text file with accompanying FuzzyLogic class to read it in and produce charts showing the risk of the weapon the player used and the anger level of the spider.
+2. An fcl text file with accompanying FuzzyLogic to read it in (incorporated into our GameRunner class) and this then produces charts showing the risk of the weapon the player used and the anger level of the spider.
 3. The AStar Heuristic Search Algorithm to find our player (the goal node)
 4. Some Neural Network logic to evaluate our maze and determine the best course of action for the player (To Run away/avoid/Attack or Panic) based on the items that are generated randomly each time within the maze (sword, bomb and number of enemies as well as your health). 
 
@@ -53,22 +54,22 @@ The game sets out __rules__ for the _anger level of the spider_ (__irritated__ o
    With any Weapon   Does		 1 damage
 
 2. The Red Spider - Fists (No Weapon)    Inflicts   6 damage
-	 With any Weapon	  Does		 2 damage
+   With any Weapon	  Does		 2 damage
 
 3. The Orange Spider - Fists (No Weapon) Inflicts   7 damage
-	 With any Weapon	  Does		 3 damage
+   With any Weapon	  Does		 3 damage
 
 4. The Grey Spider - Fists (No Weapon)   Inflicts   8 damage
-	 With any Weapon	  Does		 4 damage
+   With any Weapon	  Does		 4 damage
 
 5. The Green Spider - Fists (No Weapon)  Inflicts   9 damage
-	 With any Weapon	  Does		 5 damage
+   With any Weapon	  Does		 5 damage
 
 6. The Brown Spider - Fists (No Weapon)  Inflicts  10 damage
-	 With any Weapon	  Does		 6 damage
+   With any Weapon	  Does		 6 damage
 
 7. The Blue Spider - Fists (No Weapon)   Inflicts  11 damage
-	 With any Weapon	  Does		 7 damage
+   With any Weapon	  Does		 7 damage
 
 8. The Black spider (The 'Black Widow') - Fists (No Weapon) Inflicts 15 damage
    With any Weapon	  Does		10 damage
